@@ -1,0 +1,31 @@
+Base de dados usada: jogostabuleiro
+Colecao principal: jogos
+
+1) Quantos jogos estao registados na base de dados?
+db.jogos.countDocuments({})
+
+2) Quantos jogos pertencem a categoria "Family"?
+db.jogos.countDocuments({ category: "Family" })
+
+3) Qual a lista de autores, ordenada alfabeticamente e sem repeticoes?
+db.jogos.aggregate([
+  { $unwind: "$autores" },
+  { $group: { _id: "$autores.name" } },
+  { $sort: { _id: 1 } },
+  { $project: { _id: 0, autor: "$_id" } }
+])
+
+4) Qual a distribuicao de jogos por ano de lancamento?
+db.jogos.aggregate([
+  { $group: { _id: "$year", total: { $sum: 1 } } },
+  { $sort: { _id: 1 } },
+  { $project: { _id: 0, ano: "$_id", total: 1 } }
+])
+
+5) Qual a distribuicao de jogos por editora?
+db.jogos.aggregate([
+  { $unwind: "$editoras" },
+  { $group: { _id: "$editoras.name", total: { $sum: 1 } } },
+  { $sort: { _id: 1 } },
+  { $project: { _id: 0, editora: "$_id", total: 1 } }
+])

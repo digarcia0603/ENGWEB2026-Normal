@@ -1,0 +1,86 @@
+openapi: 3.0.0
+info:
+  title: API Jogos de Tabuleiro
+  version: 1.0.0
+  description: API de dados do exercicio 1 do exame normal de Engenharia Web 2026.
+servers:
+  - url: http://localhost:17000
+paths:
+  /jogos:
+    get:
+      summary: Lista jogos ou filtra por editora
+      parameters:
+        - in: query
+          name: editora
+          schema:
+            type: string
+          required: false
+          description: Nome ou id da editora
+      responses:
+        '200':
+          description: Lista de jogos
+    post:
+      summary: Acrescenta um jogo novo
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Jogo criado
+  /jogos/{id}:
+    get:
+      summary: Obtem um jogo pelo identificador
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Dados completos do jogo
+        '404':
+          description: Jogo nao encontrado
+    put:
+      summary: Altera um jogo pelo identificador
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Jogo alterado
+    delete:
+      summary: Remove um jogo pelo identificador
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Jogo removido
+  /autores:
+    get:
+      summary: Lista autores ordenados alfabeticamente, sem repeticoes
+      responses:
+        '200':
+          description: Lista de autores com os respetivos jogos
+  /categorias:
+    get:
+      summary: Lista categorias ordenadas alfabeticamente, sem repeticoes
+      responses:
+        '200':
+          description: Lista de categorias com os respetivos jogos

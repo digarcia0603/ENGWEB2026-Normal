@@ -1,0 +1,44 @@
+[
+  {
+    "titulo": "Ensaio sobre a Cegueira",
+    "autor": "Jose Saramago",
+    "paginas": 312,
+    "genero": "Romance",
+    "lido": true
+  },
+  {
+    "titulo": "Os Maias",
+    "autor": "Eca de Queiros",
+    "paginas": 716,
+    "genero": "Romance",
+    "lido": false
+  },
+  {
+    "titulo": "1984",
+    "autor": "George Orwell",
+    "paginas": 328,
+    "genero": "Distopia",
+    "lido": true
+  },
+  {
+    "titulo": "O Principezinho",
+    "autor": "Antoine de Saint-Exupery",
+    "paginas": 96,
+    "genero": "Fabula",
+    "lido": false
+  },
+  {
+    "titulo": "A Metamorfose",
+    "autor": "Franz Kafka",
+    "paginas": 104,
+    "genero": "Novela",
+    "lido": false
+  },
+  {
+    "titulo": "Clean Code",
+    "autor": "Robert C. Martin",
+    "paginas": 464,
+    "genero": "Tecnico",
+    "lido": false
+  }
+]
