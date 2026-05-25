@@ -176,30 +176,3 @@ As queries MongoDB correspondentes ao ponto 1.2 do enunciado encontram-se em:
 ```bash
 ex1/queries.txt
 ```
-
-## Verificação dos requisitos
-
-- [x] O repositório contém a pasta `ex1`.
-- [x] O repositório contém a pasta `ex2`.
-- [x] No exercício 1, a base de dados usada é `jogostabuleiro`.
-- [x] No exercício 1, a coleção principal chama-se `jogos`.
-- [x] O ficheiro `queries.txt` foi incluído no exercício 1.
-- [x] A rota `GET /jogos` está implementada.
-- [x] A rota `GET /jogos/:id` está implementada.
-- [x] A rota `GET /jogos?editora=EEEE` está implementada.
-- [x] A rota `GET /autores` está implementada.
-- [x] A rota `GET /categorias` está implementada.
-- [x] A rota `POST /jogos` está implementada.
-- [x] A rota `PUT /jogos/:id` está implementada.
-- [x] A rota `DELETE /jogos/:id` está implementada.
-- [x] A documentação Swagger está disponível em `/api-docs`.
-- [x] O exercício 1 inclui Dockerfile e `docker-compose.yml`.
-- [x] O exercício 2 inclui um modelo Mongoose para os livros.
-- [x] O exercício 2 inclui um dataset inicial com 6 livros.
-- [x] A rota `GET /api/livros`, incluindo pesquisa com `?search=X`, está implementada.
-- [x] A rota `POST /api/livros` está implementada.
-- [x] A rota `PUT /api/livros/:id` altera o campo `lido`.
-- [x] A rota `DELETE /api/livros/:id` está implementada.
-- [x] A API do exercício 2 está exposta na porta `19020`.
-- [x] A interface estática é servida por Nginx na porta `19021`.
-- [x] O MongoDB do exercício 2 não fica acessível diretamente a partir do exterior.
